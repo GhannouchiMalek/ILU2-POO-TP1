@@ -56,4 +56,49 @@ public class Village {
 		}
 		return chaine.toString();
 	}
-}
+
+
+	private static class Marche {
+		private Etal[] etals ;
+	
+	
+		private Marche(int nbEtals) {
+			super ();
+			this.etals = new Etal[nbEtals];
+			for (int i=0 ;i< etals.length ; i++) {
+				Etal etal = new Etal();
+				etals[i]=etal;
+				
+			}
+		}
+		
+		private void utiliserEtal(int indiceEtal, Gaulois vendeur, String produit, int nbProduit) {
+			etals[indiceEtal].occuperEtal(vendeur,produit, nbProduit);
+			
+		}
+		
+		private int trouverEtalLibre() {
+			for (int i = 0; i < etals.length; i++) {
+				if (!etals[i].isEtalOccupe()) {
+					return i;
+				}
+			}
+			return -1;
+		}
+		
+		
+		private Etal[] trouverEtals(String produit) {
+			Etal[] etalProd = new Etal[etals.length];
+			int j=0;
+			for(int i=0;i<etals.length;i++) {
+				if(etals[i].contientProduit(produit)) {
+					etalProd[j]=etals[i];
+					j++;
+				}
+			}
+			return etalProd;
+		}
+		
+	}
+		
+}		

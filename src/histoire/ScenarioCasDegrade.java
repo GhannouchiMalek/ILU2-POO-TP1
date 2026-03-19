@@ -15,7 +15,7 @@ public class ScenarioCasDegrade {
 		System.out.println("Après libererEtal : \"" + result + "\"");
 		System.out.println("Fin du test 1\n");
 
-		// ---------------------------------------------------------------
+	
 		System.out.println("=== Test 2a : acheterProduit avec acheteur null ===");
 		Etal etal2 = new Etal();
 		Gaulois vendeur = new Gaulois("Bonemine", 7);
@@ -24,7 +24,9 @@ public class ScenarioCasDegrade {
 		System.out.println("Résultat : \"" + res2 + "\"");
 		System.out.println("Fin du test 2a\n");
 
-		// ---------------------------------------------------------------
+		
+		
+	
 		System.out.println("=== Test 2b : acheterProduit avec quantité négative ===");
 		Etal etal3 = new Etal();
 		etal3.occuperEtal(vendeur, "fleurs", 10);
@@ -35,7 +37,7 @@ public class ScenarioCasDegrade {
 		}
 		System.out.println("Fin du test 2b\n");
 
-		// ---------------------------------------------------------------
+
 		System.out.println("=== Test 2c : acheterProduit sur un étal non occupé ===");
 		Etal etal4 = new Etal();
 		try {
@@ -45,7 +47,7 @@ public class ScenarioCasDegrade {
 		}
 		System.out.println("Fin du test 2c\n");
 
-		// ---------------------------------------------------------------
+
 		System.out.println("=== Test 3 : afficherVillageois sans chef ===");
 		Village villSansChef = new Village("Village Fantôme", 5, 3);
 		try {
